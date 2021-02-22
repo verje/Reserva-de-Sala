@@ -1,0 +1,27 @@
+.bg-message{
+    background-color: rgb(97, 221, 151);
+    /*background-color: rgb(221, 147, 97);¨*/
+    border-radius: 25px;
+}
+.message-hide{
+    display: none;
+}
+.bg-message i {
+    color: white;
+}
+#close-icon:hover{
+    cursor: pointer;
+}
+.bg-message div p{
+    color: white;
+}
+.msg-closeIcon-padding{
+    padding: 7px 15px 7px 0;
+}
+.p-7{
+    padding: 7px;
+}
+.text-align-center{
+    text-align: center;
+}
+

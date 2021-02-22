@@ -1,0 +1,460 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box; /*para que el borde se incluya en el ancho de la caja*/
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(65, 97, 105)
+}
+button:hover{
+    cursor: pointer;
+}
+.bg-img{
+    background-image: url("/statics/images/fondo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text-jumbo{
+    font-weight: 900; 
+    font-size: 5rem; 
+    text-align: center; 
+    color: white; 
+    text-shadow: 1px 1px 2px rgb(58, 53, 43);
+    padding: 5rem;
+}
+.btn-jumbo{
+    border: none;
+    width: 12rem;
+    height: 3rem;
+    background-color: rgb(56, 59, 62);
+    color: white;
+    background:#212531;
+    background: linear-gradient(to right bottom, #2f3441 50%, #212531 50%);
+    transition: all 0.3s ease-out    
+
+}
+
+.btn-jumbo:hover{
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.contenedor{
+    position: relative;
+    margin:auto;
+    height: auto;
+}
+.contenedor-filtro{
+    position: relative;
+    margin:auto;
+    height: auto;
+    width: 100%;
+    background-color: rgba(51, 63, 80, 0.6);
+    padding: 0.8rem;
+}
+
+.bg-white{
+    background-color: white;
+}
+
+.fila{
+    position: relative;
+    margin:auto;
+    width: 100%;
+    height: auto;
+    clear: both;
+    display: table;
+}
+
+[class*="col-"]{
+    float: left;
+    /*border: 1px solid red;*/
+}
+
+.col-12{
+    width: 100%;
+}
+.col-11{
+    width: 91.66666667%;
+}
+.col-10{
+    width: 83.33333333%;
+}
+.col-9{
+    width: 75%;
+}
+.col-8{
+    width: 66.66666667%;
+}
+.col-7{
+    width: 58.33333333%;
+}
+.col-6{
+    width: 50%;
+}
+.col-5{
+    width: 41.66666667%;
+}
+.col-4{
+    width: 33.33333333%;
+}
+.col-3{
+    width: 25%;
+}
+.col-2{
+    width: 16.66666667%;
+}
+.col-1{
+    width: 8.33333333%;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.w-90{
+    width: 90%;
+}
+
+.w-75{
+    width: 75%;
+}
+
+.w-50{
+    width: 50%;
+}
+
+.w-30{
+    width: 30%;
+}
+
+.w-25{
+    width: 25%;
+}
+
+form label{
+    color: rgb(25, 52, 56);
+    font-weight: 600;
+}
+
+
+input{
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 0px;
+    height: 20px;
+    border-bottom: 1px solid rgb(80, 120, 130);
+    text-align: center;
+    outline-color: rgb(181, 232, 247);
+}
+
+.icono{
+    color: darkslategrey;
+}
+
+.btn{
+    display:inline-block;
+    width: 100%;
+    height: 60px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    transition: all 0.15s;
+}
+.btn:hover{
+    color:#DDDDDD;
+    border-color:#DDDDDD;
+    cursor: pointer;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.btn-aceptar{
+    background-color: rgb(80, 120, 130);
+}
+.btn-cancelar{
+    background-color: rgb(238, 152, 136);
+}
+
+.align-con-left{
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    flex-direction: row;
+}   
+
+.align-con-cen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.align-vh-con-cen{
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.align-vertical-cen{
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+}
+
+.svg-icon{
+    width: 45px;
+    height: auto;
+}
+
+.svg-icon:hover{
+    cursor: pointer;
+    background-color: rgb(175, 183, 192);
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.svgIconClicked{
+    background-color: #7BA7C9;
+    border-radius: 50%;
+}
+
+input[type="file"]{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+label[for="foto_sala"] {
+    color: rgb(53, 56, 92);
+    background-color: #d5dadd;
+    display: inline-block;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 10px 40px !important;
+    width: fit-content;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.img-fit{
+    float:left;
+    width:270px;
+    height:205px;
+    object-fit:cover;
+    padding-top: 20px;
+}
+
+.btn-filter{
+    background-color: rgb(231, 228, 223);
+    border: none;
+    border-radius: 6px 0px 0px 6px;
+    width: 40px;
+    height: 2rem;
+}
+.btn-search{
+    background-color: rgb(233, 203, 67);
+    border: none;
+    border-radius: 0px 6px 6px 0px;
+    width: 150px;
+    height: 2rem;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.height-35{
+    height: 35px;
+}
+.height-50{
+    height: 50px;
+}
+
+.mt-5{
+    margin-top: 5px;
+}
+.m-15{
+    margin:15px;
+}
+.input-control{
+    height: 2rem;
+}
+
+.pl-15{
+    padding-left: 15px;
+}
+.order-1 {
+    order: 1;
+}
+.order-2 {
+    order: 2;
+}
+.order-3 {
+    order: 3;
+}
+.order-4 {
+    order: 4;
+}
+
+.align-to-right{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.p-7{
+    padding: 7px;
+}
+
+.fade {
+    transition: opacity 0.15s linear;
+}
+
+.bg-message{
+    background-color: rgb(97, 221, 151);
+    /*background-color: rgb(221, 147, 97);¨*/
+    border-radius: 5px;
+}
+.message-hide{
+    display: none;
+}
+.message-show{
+    animation: 1s fadeIn;
+    animation-fill-mode: forwards; 
+    display: flex;
+}
+
+.bg-message i {
+    color: white;
+}
+#close-icon:hover{
+    cursor: pointer;
+}
+.bg-message div p{
+    color: white;
+}
+.msg-closeIcon-padding{
+    padding: 7px 15px 7px 0;
+}
+
+.bg-img-form{
+    background-image: url("/statics/images/sala.PNG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 10px;
+   }
+
+@media(min-width:1200px){
+    .col-lg-12{width: 100%}
+    .col-lg-11{width: 91.66666667%;}
+    .col-lg-10{width: 83.33333333%;}
+    .col-lg-9{width: 75%;}   
+    .col-lg-8{width: 66.66666667%;}
+    .col-lg-7{width: 58.33333333%;}
+    .col-lg-6{width: 50%;}
+    .col-lg-5{width: 41.66666667%;}
+    .col-lg-4{width: 33.33333333%;}
+    .col-lg-3{width: 25%;}
+    .col-lg-2{width: 16.66666667%;}
+    .col-lg-1{width: 8.33333333%;}
+}
+
+@media(max-width:1199px) and (min-width:992px){
+    .col-md-12{width: 100%;}
+    .col-md-11{width: 91.66666667%;}
+    .col-md-10{width: 83.33333333%;}
+    .col-md-9{width: 75%;}  
+    .col-md-8{width: 66.66666667%;}
+    .col-md-7{width: 58.33333333%}
+    .col-md-6{width: 50%;}
+    .col-md-5{width: 41.66666667%;}
+    .col-md-4{width: 33.33333333%;}
+    .col-md-3{width: 25%;}
+    .col-md-2{width: 16.66666667%;}
+    .col-md-1{width: 8.33333333%;}
+}
+
+@media(max-width:991px) and (min-width:768px){
+    .col-sm-12{width: 100%;}
+    .col-sm-11{width: 91.66666667%;}
+    .col-sm-10{width: 83.33333333%;}
+    .col-sm-9{width: 75%;}    
+    .col-sm-8{width: 66.66666667%;}
+    .col-sm-7{width: 58.33333333%;}
+    .col-sm-6{width: 50%;}
+    .col-sm-5{width: 41.66666667%;}
+    .col-sm-4{width: 33.33333333%;}
+    .col-sm-3{width: 25%;}
+    .col-sm-2{width: 16.66666667%;}
+    .col-sm-1{width: 8.33333333%;}
+}
+@media(max-width:767px){
+    .col-xs-12{width: 100%;}
+    .col-xs-11{width: 91.66666667%;}
+    .col-xs-10{width: 83.33333333%;}
+    .col-xs-9{width: 75%;}   
+    .col-xs-8{width: 66.66666667%;}
+    .col-xs-7{width: 58.33333333%;}
+    .col-xs-6{width: 50%};
+    .col-xs-5{width: 41.66666667%;}
+    .col-xs-4{width: 33.33333333%;}
+    .col-xs-3{width: 25%;}
+    .col-xs-2{width: 16.66666667%;}
+    .col-xs-1{width: 8.33333333%;}
+    .contenedor-filtro{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .contenedor-filtro div:nth-of-type(1) {
+        order: 3;
+    }
+    .contenedor-filtro div:nth-of-type(2) {
+        order: 1;
+        border-radius: 6px 0 0 6px;
+    }
+    .contenedor-filtro div:nth-of-type(3) {
+        order: 2;
+        border-radius: 0 6px 6px 0;
+    }
+    .contenedor-filtro div:nth-of-type(4) {
+        order: 4;
+    }
+    .btn-search{
+        margin: 5px 0 0 0;
+        width: 100%;
+    } 
+    .btn-filter{
+        margin: 5px 0 0 0;
+        width: 100%;
+    }
+          
+}       
+
+
+@media all and (max-width:767px){
+    button{
+        display:block;
+        width: 100%;
+    }
+    .text-jumbo{
+        font-weight: 900; 
+        font-size: 3rem; 
+        text-align: center; 
+        color: white; 
+        text-shadow: 1px 1px 2px rgb(58, 53, 43);
+        padding: 2rem;
+    }
+    .m-15{
+        margin: 0px;
+    }
+}

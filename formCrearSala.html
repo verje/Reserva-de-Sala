@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maquetacion</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="statics/css/columnas2.css">
+    <link rel="stylesheet" href="statics/css/navbar.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="contenedor align-con-cen">
+        <div class="col-7 col-xs-12">
+            <div class="contenedor">
+
+                <div id="mensaje" class="contenedor col-12 col-xs-12 align-con-cen message-hide">
+                    <div class="col-8 col-xs-8 bg-message" style="margin: 10px;">
+                        <div class="col-1 col-xs-1 p-7"><i class="fa fa-info-circle fa-lg"></i></div>
+                        <div class="col-10 col-xs-10 text-align-center p-7">
+                            <p>Sala creada con exito</p>
+                        </div>
+                        <div class="col-1 col-xs-1 align-to-right msg-closeIcon-padding"><i id="close-icon"
+                                class="fa fa-times" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 bg-img">
+                    <form enctype="multipart/form-data">
+                        <!--Izquierda-->
+                        <div class="col-7 col-xs-12" style="padding: 10px;">
+                            <div class="fila">
+                                <div class="col-12 p-7">
+                                    <div class="fila">
+                                        <label for="">Nombre Sala</label>
+                                    </div>
+                                    <input class="w-100" type="text" name="nombresala" id="nombre_sala" required>
+                                </div>
+                                <div class="col-12 p-7">
+                                    <div class="fila">
+                                        <label for="">Ubicacion</label>
+                                    </div>
+                                    <div class="fila">
+                                        <i class="fa fa-map-marker icono" aria-hidden="true"></i>&nbsp;<input
+                                            class="w-90" type="text" name="ubicacionsala" id="ubicacion_sala" value=""
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="fila">
+
+                                    <div class="col-4"><label for="">Capacidad</label></div>
+                                    <div class="col-8"><label for="">Administrador</label></div>
+                                </div>
+                                <div class="fila">
+                                    <div class="col-4"><i class="fa fa-users icono" aria-hidden="true"></i> <input
+                                            type="number" class="w-30" name="capacidadsala" id="capacidad_sala" value=1
+                                            required>
+                                    </div>
+                                    <div class="col-8" style="padding-right: 10px;"><input class="w-100" type="text"
+                                            name="adminsala" id="" required></div>
+                                </div>
+                            </div>
+                            <div class="col-12 p-7" style="height: 20px;">
+
+                            </div>
+                            <div class="col-12 p-7"
+                                style="margin-right: 10px; background-color: rgba(255, 255, 255, 0.5);">
+                                <div class="fila p-7"><label for="">Recursos</label></div>
+                                <div class="fila p-7">
+                                    <div class="col-3 align-con-cen"><img id="svg1" class="svg-icon"
+                                            src="./icons/arana.svg" onclick="validarSvg(1)"></div>
+                                    <div class="col-3 align-con-cen"><img id="svg2" class="svg-icon"
+                                            src="./icons/pc.svg" onclick="validaSvg(2)">
+                                    </div>
+                                    <div class="col-3 align-con-cen"><img id="svg3" class="svg-icon"
+                                            src="./icons/phone.svg" alt=""></div>
+                                    <div class="col-3 align-con-cen"><img id="svg4" class="svg-icon"
+                                            src="./icons/wifi.svg" alt=""></div>
+                                </div>
+                                <div class="fila p-7">
+                                    <div class="col-3 align-con-cen"><img id="svg5" class="svg-icon"
+                                            src="./icons/tv.svg" alt="">
+                                    </div>
+                                    <div class="col-3 align-con-cen"><img id="svg6" class="svg-icon"
+                                            src="./icons/videobean.svg" alt="">
+                                    </div>
+                                    <div class="col-3 align-con-cen"><img id="svg7" class="svg-icon"
+                                            src="./icons/rotafolio.svg" alt="">
+                                    </div>
+                                    <div class="col-3 align-con-cen"><img id="svg8" class="svg-icon"
+                                            src="./icons/pantalla.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Derecha-->
+                        <div class="col-5 col-xs-12" style="background-color: white;">
+                            <div class="col-12 align-con-cen">
+                                <img src="./statics/images/baseroom.png" class="img-fit" id="room_picture">
+                            </div>
+                            <div class="col-12 align-con-cen" style="padding: 30px 0">
+                                <label for="foto_sala"><i class="fa fa-upload" aria-hidden="true"></i>&nbsp;Upload
+                                    Room's
+                                    picture</label>
+                                <input type="file" name="fotosala" id="foto_sala">
+                            </div>
+                            <div class="col-12">
+                                <div class="fila">
+                                    <div class="col-6 align-con-cen"><button id="btnAceptar"
+                                            class="btn btn-aceptar m-15" type="submit">Aceptar</button>
+                                    </div>
+                                    <div class="col-6 align-con-cen"><button class="btn btn-cancelar m-15"
+                                            type="submit">Cancelar</button></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <input id="r1" name="recurso1" type="hidden" value=0>
+                        <input id="r2" name="recurso2" type="hidden" value=0>
+                        <input id="r3" name="recurso3" type="hidden" value=0>
+                        <input id="r4" name="recurso4" type="hidden" value=0>
+                        <input id="r5" name="recurso5" type="hidden" value=0>
+                        <input id="r6" name="recurso6" type="hidden" value=0>
+                        <input id="r7" name="recurso7" type="hidden" value=0>
+                        <input id="r8" name="recurso8" type="hidden" value=0>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $('form').on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: 'phpfiles/guardar.php',
+            data: new FormData(this),
+            processData: false,
+            contentType: false,
+            success: function () {
+                $('form').trigger("reset");
+                $('.bg-message').fadeIn("slow");
+                $('#mensaje').removeClass('message-hide').addClass('message-show')
+                $("#room_picture").attr("src", "statics/images/baseroom.png");
+                setTimeout(function () { $('.bg-message').fadeOut("slow"); }, 3000);
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        $(document).on('change', '#foto_sala', function () {
+            var img_ok = 1;
+            var foto = document.getElementById("foto_sala").files[0];
+            var foto_name = foto.name;
+            var ext = foto_name.split('.').pop().toLowerCase();
+            if (jQuery.inArray(ext, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
+                img_ok = 0;
+                alert("Invalid image file")
+            }
+            var size = foto.size;
+            if (size > 2000000) {
+                img_ok = 0;
+                alert("Image File Size is too long");
+            }
+            if (img_ok == 1) {
+                var form_data = new FormData();
+                form_data.append("file", foto);
+                $.ajax({
+                    url: "/phpfiles/upload.php",
+                    method: "POST",
+                    data: form_data,
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    success: function (response) {
+                        $("#room_picture").attr("src", response);
+                    }
+                })
+
+            }
+        });
+    });
+    $(document).on('click', '.svg-icon', function () {
+        var id = $(this).attr('id');
+        $(this).toggleClass("svgIconClicked");
+        var lastChar = id.substr(id.length - 1);
+        var idInput = "r" + lastChar;
+        var selectedInput = document.getElementById(idInput);
+        var valor = selectedInput.value;
+        if (valor == 0) {
+            $(selectedInput).val(1);
+        } else {
+            $(selectedInput).val(0);
+        }
+    });
+    $(document).ready(msg);
+    var toggle = 1;
+    function msg() {
+        $('#close-icon').click(function () {
+            $('.bg-message').fadeOut("slow");
+        });
+    }; 
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Mensajes</title>
+    <link rel="stylesheet" href="columnas2.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="mensaje" class="contenedor col-12 col-xs-12 align-con-cen message-hide">
+        <div class="col-8 bg-message" style="margin: 10px;">
+            <div class="col-1 p-7"><i class="fa fa-info-circle fa-lg"></i></div>
+            <div class="col-10 text-align-center p-7">
+                <p>Sala creada con exito</p>
+            </div>
+            <div class="col-1 align-to-right msg-closeIcon-padding"><i id="close-icon" class="fa fa-times"
+                    aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    $(document).ready(msg);
+    var toggle = 1;
+    function msg() {
+        $('#close-icon').click(function () {
+            $('.bg-message').toggleClass("message-hide");
+        });
+    };  
+</script>
+
+</html>

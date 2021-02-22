@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+tbody {
+    display: block;
+    height: 20rem;
+    overflow: auto;
+}
+
+thead,
+tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+thead {
+    width: calc(100% - 1em);
+    background-color: rgb(252, 252, 252);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgb(217, 225, 228);
+}
+
+th,
+td {
+    padding: 0.25rem;
+    text-align: left;
+}
+
+td {
+    border: none;
+    color: rgb(104, 106, 134);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+td > * {
+    vertical-align: middle;
+
+}
+
+tr:hover td {
+    color: #1BA9FF;
+}
+
+thead tr th {
+    color: rgb(82, 102, 139);
+    font-weight: 600;
+    font-size: 0.9rem;
+    background-color: white;
+    padding: 0.6rem;
+}
+
+caption {
+    text-align: left;
+    padding: 0.6rem 0.6rem;
+    font-weight: 600;
+    color: rgb(165, 181, 197);
+}
+
+tbody tr:nth-child(odd) {
+    background: rgb(240, 239, 243);
+}
+
+tbody tr:nth-child(even) {
+    background: rgb(255, 255, 255);
+}
+
+tbody tr:hover {
+    background: rgb(0, 107, 254);
+    background: linear-gradient(90deg, rgb(1, 106, 253) 0%, rgb(5, 157, 252) 3%, rgba(255, 255, 255, 1) 9%, rgba(254, 254, 254, 1) 100%);
+    border: 1px solid rgb(180, 223, 243);
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    /*box-shadow: inset 0 0 5px grey;*/
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(187, 193, 199);
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a6b8;
+    border: 1px solid white;
+}
+
+.img-fit-table {
+    width: 60px;
+    height: 50px;
+    object-fit: cover;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.btn-reservar {
+    border: 1px solid rgb(161, 220, 243);
+    border-radius: 25px;
+    padding: 5px 10px;
+    background-color: white;
+    outline: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: 5rem;
+}
+
+.btn-reservar:hover {
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    background-color: rgb(174, 255, 224);
+    color: rgb(114, 158, 175);
+}
+
+.border-table {
+    position: relative;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid lightblue;
+    background: rgb(210, 215, 217);
+    background: linear-gradient(355deg, rgba(210, 215, 217, 1) 0%, rgba(255, 255, 255, 1) 38%, rgba(254, 254, 254, 1) 100%);
+    box-shadow: 0 8px 6px -6px rgb(102, 162, 252);
+}
+
+.container-table {
+    display: flex;
+    padding: 2rem;
+    background: rgb(82, 120, 130);
+    background: linear-gradient(355deg, rgba(82, 120, 130, 1) 0%, rgba(245, 245, 245, 1) 58%, rgba(245, 245, 245, 1) 100%);
+}
+
+.row-img {
+    display: block;
+}
+
+.btn-action{
+    border: none;
+    outline: none;
+    padding: 0 1rem;
+    background-color: transparent;
+}
+.btn-action:hover{
+    cursor: pointer;
+    
+}
+
+.btn-edit{
+    border-bottom: 3px solid #50c79f;
+    color: #50c79f;
+    padding: 0px 5px;
+}
+.btn-edit:hover{
+    background: rgb(97,217,189);
+    background: linear-gradient(0deg, rgba(97,217,189,1) 0%, rgba(255,255,255,1) 50%, rgba(254,254,254,1) 100%);
+    transition: all 0.5s ease;
+}
+
+.btn-delete{
+    border-bottom: 3px solid  rgb(224, 65, 97);
+    color: rgb(224, 65, 97);
+    padding: 0px 5px;
+}
+.btn-delete:hover{
+    background: rgb(217, 115, 97);
+    background: linear-gradient(0deg, rgb(217, 97, 97) 0%, rgba(255,255,255,1) 50%, rgba(254,254,254,1) 100%);
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.p-lr{
+    padding: 0 5px;
+}
+
+@media all and (max-width:767px) {
+    .row-img {
+        display: none;
+    }
+
+    thead tr th {
+        font-weight: 300;
+        font-size: 0.8rem;
+        background-color: white;
+        padding: 0.3rem;
+    }
+
+    .container-table {
+        padding: 0.1rem;
+    }
+
+    .btn-reservar {
+        border-radius: 25px;
+        padding: 1px;
+        width: 4rem;
+    }
+/*
+	table, thead, tbody, th, td, tr, caption { 
+		display: block; 
+	}
+
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid rgb(221, 219, 219); }
+	
+	td { 
+		border: none;
+		border-bottom: 1px solid rgb(228, 225, 225); 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	td:nth-of-type(2):before { content: "Nombre"; }
+	td:nth-of-type(3):before { content: "Ubicacion"; }
+	td:nth-of-type(4):before { content: "Capacidad"; }
+    td:nth-of-type(5):before { content: "Encargado"; }
+    
+    tbody tr:hover {
+        background: rgb(0, 107, 254);
+        background: linear-gradient(270deg, rgb(126, 178, 252) 0%, rgb(146, 213, 255) 3%, rgba(255, 255, 255, 1) 9%, rgba(254, 254, 254, 1) 100%);
+        border: 1px solid rgb(180, 223, 243);
+    
+    }    
+*/
+}

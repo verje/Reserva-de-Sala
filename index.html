@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>maquetacion</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="statics/css/columnas2.css">
+    <link rel="stylesheet" href="statics/css/navbar.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="contenedor col-12 col-xs-12 bg-img">
+        <div class="contenedor col-12 col-xs-12 bg-nav">
+            <div class="menu_bar col-xs-6">
+                <i class="fa fa-bars" style="color: rgb(18, 23, 87);"></i>
+            </div>
+            <div class="col-2 col-xs-6 contenedor-logo">
+                <img src="./statics/images/logo.png" class="logo">
+            </div>
+            <div class="col-10 col-xs-12">
+                <nav>
+                    <ul>
+                        <li><a href="#"><img src="./icons/SVG/home.svg" height="15px"></a></li>
+                        <li><a href="#">Nueva Sala</a></li>
+                        <li><a href="#">Salas</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#"><i class="fa fa-user-circle-o" style="color:white;"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="contenedor-filtro align-con-cen">
+            <div class="col-1 col-xs-2 align-to-right"><button class="btn-filter"><i class="fa fa-filter fa-lg"
+                        aria-hidden="true"></i></button></div>
+            <div class="col-3 col-xs-6 align-con-cen bg-white input-control"><input type="date" name="fechainicio"
+                    id="fecha">
+            </div>
+            <div class="col-3 col-xs-6 align-con-cen bg-white input-control"><input type="time" name="horainicio"
+                    id="hora">
+            </div>
+            <div class="col-2 col-xs-10 align-con-left"><button class="btn-search">Buscar una sala&nbsp;<i
+                        class="fa fa-search fa-lg" aria-hidden="true"></i></button></div>
+        </div>
+        <div class="fila col-xs-12">
+            <div class="col-12 col-xs-12 align-vh-con-cen">
+                <span>
+                    <p class="text-jumbo">
+                        Meeting Room Booking <br>System
+                    </p>
+                </span>
+            </div>
+            <div class="col-12 col-xs-12 align-con-cen mb-20">
+                <button class="btn-jumbo">Reservar una sala</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    $(document).ready(main);
+    var toggle = 1;
+    function main() {
+        $('.menu_bar').click(function () {
+            if (toggle == 1) {
+                $('nav').animate({
+                    left: '0',
+                    height: '100%',
+                });
+                toggle = 0;
+            } else {
+                toggle = 1;
+                $('nav').animate({
+                    left: '-100%',
+                    height: '1%',
+                }, "slow");
+            }
+        });
+    };  
+</script>
+
+</html>
